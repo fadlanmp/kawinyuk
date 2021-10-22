@@ -13,15 +13,21 @@ class AuthController extends Controller
     public function register(Request $request)
     {
         $fields = $request->validate([
-            'name' => 'required|string',
+            'vendorName' => 'required|string',
             'email' => 'required|string|unique:users,email',
-            'password' => 'required|string|confirmed'
+            'password' => 'required|string|confirmed',
+            'vendorDescription' => 'string',
+            'vendorPhone' => 'string',
+            'vendorAddress' => 'string',
         ]);
 
         $user = User::create([
-            'name' => $fields['name'],
+            'vendorName' => $fields['vendorName'],
             'email' => $fields['email'],
-            'password' => bcrypt($fields['password'])
+            'password' => bcrypt($fields['password']),
+            'vendorDescription' => $fields['vendorDescription'],
+            'vendorPhone' => $fields['vendorPhone'],
+            'vendorAddress' => $fields['vendorAddress'],
         ]);
 
         $token = $user->createToken('myapptoken')->plainTextToken;

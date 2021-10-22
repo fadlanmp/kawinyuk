@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Vendor;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
-class VendorController extends Controller
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class VendorController extends Controller
     public function index()
     {
         //
-        return Vendor::all();
+        return Service::all();
     }
 
     /**
@@ -27,13 +27,12 @@ class VendorController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'vendorName' => 'required',
-            'vendorDescription' => 'required',
-            'vendorPhone' => 'required',
-            'vendorAddress' => 'required'
+            'serviceName' => 'required',
+            'serviceDescription' => 'required',
+            'servicePortfolio'
         ]);
 
-        return Vendor::create($request->all());
+        return Service::create($request->all());
     }
 
     /**
@@ -44,7 +43,7 @@ class VendorController extends Controller
      */
     public function show($id)
     {
-        return Vendor::find($id);
+        return Service::find($id);
     }
 
     /**
@@ -56,9 +55,9 @@ class VendorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $vendor = Vendor::find($id);
-        $vendor->update($request->all());
-        return $vendor;
+        $service = Service::find($id);
+        $service->update($request->all());
+        return $service;
     }
 
     /**
@@ -69,7 +68,7 @@ class VendorController extends Controller
      */
     public function destroy($id)
     {
-        return Vendor::destroy($id);
+        return Service::destroy($id);
     }
 
 
@@ -79,8 +78,8 @@ class VendorController extends Controller
      * @param  int  $vendorName
      * @return \Illuminate\Http\Response
      */
-    public function search($vendorName)
+    public function search($serviceName)
     {
-        return Vendor::where('vendorName', 'like', '%' . $vendorName . '%')->get();
+        return Service::where('serviceName', 'like', '%' . $serviceName . '%')->get();
     }
 }

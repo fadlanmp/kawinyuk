@@ -73,9 +73,9 @@ class ServiceController extends Controller
 
 
     /**
-     * Search for a vendor name.
+     * Search for a service name.
      *
-     * @param  int  $vendorName
+     * @param  int  $serviceName
      * @return \Illuminate\Http\Response
      */
     public function search($serviceName)

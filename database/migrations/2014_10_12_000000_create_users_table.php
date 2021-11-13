@@ -17,8 +17,8 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('vendorName');
             $table->string('email')->unique();
-            $table->string('vendorDescription');
-            $table->string('vendorPhone');
+            $table->string('vendorDescription')->nullable();
+            $table->string('vendorPhone')->nullable();
             $table->string('vendorAddress');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

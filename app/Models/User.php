@@ -21,8 +21,8 @@ class User extends Authenticatable
         'vendorName',
         'email',
         'password',
-        // 'vendorDescription',
-        // 'vendorPhone',
+        'vendorDescription',
+        'vendorPhone',
         'vendorAddress'
     ];
 

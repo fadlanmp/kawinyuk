@@ -15,19 +15,19 @@ class AuthController extends Controller
         $fields = $request->validate([
             'vendorName' => 'required|string',
             'email' => 'required|string|unique:users,email',
-            'password' => 'required|string|confirmed',
-            'vendorDescription' => 'string',
-            'vendorPhone' => 'string',
-            'vendorAddress' => 'string',
+            'password' => 'required|string',
+            // 'vendorDescription' => 'string',
+            // 'vendorPhone' => 'string',
+            'vendorAddress' => 'string'
         ]);
 
         $user = User::create([
             'vendorName' => $fields['vendorName'],
             'email' => $fields['email'],
             'password' => bcrypt($fields['password']),
-            'vendorDescription' => $fields['vendorDescription'],
-            'vendorPhone' => $fields['vendorPhone'],
-            'vendorAddress' => $fields['vendorAddress'],
+            'vendorDescription' => null,
+            'vendorPhone' => null,
+            'vendorAddress' => $fields['vendorAddress']
         ]);
 
         $token = $user->createToken('myapptoken')->plainTextToken;

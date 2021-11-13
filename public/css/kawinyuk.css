@@ -542,3 +542,41 @@
     grid-gap: 20px;
     justify-content: space-around;
 }
+.vendors-container3{
+    display: grid;
+    height: 800px;
+    grid-template-rows: 300px 200px 200px;
+    justify-content: space-evenly;
+    color: white;
+    background-color: rgb(24, 24, 24);
+}
+
+.vendors-grid3{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px 150px 150px;
+    grid-template-rows: 170px 170px;
+    grid-gap: 20px;
+    justify-content: space-around;
+}
+
+.proddesc{
+    display: grid;
+    grid-template-columns: 30% 60%;
+    justify-content: left;
+}
+
+.proddesc-cont{
+    margin-top: 30px;
+}
+
+.proddesc-cont h2, h4, p{
+    margin-bottom: 20px;
+}
+
+.jenisproduk{
+    border-radius: 12px;
+    border: #314078 solid 2px;
+    color: #314078;
+    padding: 10px 24px;
+}

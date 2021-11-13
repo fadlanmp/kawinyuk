@@ -55,3 +55,7 @@ Route::get('/catering', function () {
 Route::get('/dekorasi', function () {
     return view('dekorasi');
 });
+
+Route::get('/deskripsi', function () {
+    return view('deskripsi');
+});

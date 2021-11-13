@@ -39,3 +39,7 @@ Route::get('/profile-edit', function () {
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::get('/addproduct', function () {
+    return view('addproduct');
+});

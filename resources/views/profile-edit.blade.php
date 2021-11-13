@@ -22,7 +22,7 @@
                     <a href="/profile"><img src="{{ url('assets/img/user.png') }}" class="minipic"></a>
                     <a href="/" class="h-loginbtn">Logout</a>
                 </div>
-            </div>
+            </div> 
         </div>
         <div class="profileedit-container">
             <div class="profileedit-grid">
@@ -38,7 +38,7 @@
                         </div>
                         <div class="profilecard-content" style="margin-left: 50px;">
                             <form action="#routeprofile" method="POST" class="profileform">
-                                <h2 style="margin-bottom: 30px; color: #BE42C9;">Profil</h2>
+                                <h2 style="margin-bottom: 30px; color: #BE42C9;">Profile</h2>
                                 <p>Nama Lengkap</p>
                                 <input type="text" class="profileinput">
                                 <p>Tanggal Lahir</p>

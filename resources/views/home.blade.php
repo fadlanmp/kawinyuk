@@ -1,96 +1,68 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <Title>KawinYuk! - Landing Page</Title>
+        <Title>KawinYuk! - Dashboard</Title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{url('css/kawinyuk.css')}}">
     </head>
     <body>
-        <a href="{{url('css/kawinyuk.css')}}">
         <div class="topnav">
             <div class="topnavgrid">
                 <a href="#" style="float: left; font-size: 24px; margin-top: -20px;">KawinYuk!</a>
             </div>
             <div class="topnavgrid">
-                <a href="/">Home</a>
+                <a href="#home">Home</a>
                 <a href="#news">Help</a>
                 <a href="#about">About Us</a>
                 <a href="#contact">Contacts</a>
             </div>
-            <div class="topnavgrid">
-                <div class="topnavright">
-                    <a href="/signup">Sign Up</a>
-                    <a href="/login" class="h-loginbtn">Login</a>
+            <div class="topnav2grid">
+                <div class="topnav2right">
+                    <a href="/profile">Hai, Username</a>
+                    <a href="/profile"><img src="{{ url('assets/img/user.png') }}" class="minipic"></a>
+                    <a href="/" class="h-loginbtn">Logout</a>
                 </div>
             </div>
         </div>
         <div class="bigtitle" id="grad">
             <div class="titlegrid">
                 <div class="titledesc">
-                    <h4>Hai, selamat datang!</h4>
-                    <h1>BANGUN PASARAN VENDORMU JADI LEBIH LUAS</h1>
+                    <h1>Upload Vendormu Sekarang</h1>
                     <div class="h-regiscontainer">
-                        <p>KawinYuk! adalah solusi buat kamu semua yang ingin memperluas jaringan !!</p>
-                    </div>
-                    <div class="h-regiscontainer">
-                        <a href="#inikemana" class="h-regisbtn" style="margin-top: 10px;">Get Started</a>
+                        <p>Dapatkan kemudahan untuk memperkenalkan vendormu secara luas dengan meng-upload produk vendormu disini. Cara mudah untuk menaikkan penjualan vendormu, cukup upload produk secara gratis. Costumer akan datang untung menghubungimu</p>
                     </div>
                 </div>
             </div>
-            <div class="titlegrid">
-                <img src="{{ url('assets/img/titleimg.png') }}" alt="title-image" class="titleimg">
-            </div>
-        </div>
-        <div class="vendoropttitle">
-            <div class="vendortitle">
-                <hr class="landing">
-            </div>
-            <div class="vendortitle">
-                <h2>Pilihan Vendor</h2>
-            </div>
-            <div class="vendortitle">
-                <hr class="landing">
-            </div>
-        </div>
-        <div class="vendoropt">
-            <div class="vendoroptcard-small" id="grad">
-                <div class="vendoroptcard-body">
-                    <img src="{{ url('assets/img/camera.png') }}" alt="camera" class="vendoroptimg">
-                </div>
-                <div class="vendoroptcard-body">
-                    <h4>Videografer/<br>Fotografer</h4>
-                </div>
-            </div>
-            <div class="vendoroptcard" id="grad">
-                <div class="vendoroptcard-body">
-                    <img src="{{ url('assets/img/catering.png') }}" alt="catering" class="vendoroptimg-big">
-                </div>
-                <div class="vendoroptcard-body">
-                    <h4>Catering</h4>
-                </div>
-            </div>
-            <div class="vendoroptcard-small" id="grad">
-                <div class="vendoroptcard-body">
-                    <img src="{{ url('assets/img/Flower.png') }}" alt="Flower" class="vendoroptimg">
-                </div>
-                <div class="vendoroptcard-body" style="margin-top: 0px;">
-                    <h4>Dekorasi/<br>Pernikahan</h4>
-                </div>
-            </div>
-        </div>
-        <div class="info-container">
-            <div class="infogrid">
-                <div class="infocard" id="grad">
-                    <div class="info">
-                        <div class="infos">
-                            <h2>Cara mudah untuk mendapatkan Informasi Kecantikan</h2>
-                            <p style="margin-top: 30px;">Temukan semua informasi di web ini secara Gratis !</p>
-                        </div>
+            <div class="vendoropt" id="grad">
+                <div class="vendoroptcard-small" id="grad">
+                    <div class="vendoroptcard-body">
+                        <img src="{{ url('assets/img/camera.png') }}" alt="camera" class="vendoroptimg">
                     </div>
-                    <div class="info">
-                        <img src="{{ url('assets/img/info.png') }}" alt="info" class="infoimg">
+                    <div class="vendoroptcard-body">
+                        <h4>Videografer/<br>Fotografer</h4>
                     </div>
                 </div>
+                <div class="vendoroptcard" id="grad">
+                    <div class="vendoroptcard-body">
+                        <img src="{{ url('assets/img/catering.png') }}" alt="catering" class="vendoroptimg-big">
+                    </div>
+                    <div class="vendoroptcard-body">
+                        <h4>Catering</h4>
+                    </div>
+                </div>
+                <div class="vendoroptcard-small" id="grad">
+                    <div class="vendoroptcard-body">
+                        <img src="{{ url('assets/img/Flower.png') }}" alt="Flower" class="vendoroptimg">
+                    </div>
+                    <div class="vendoroptcard-body" style="margin-top: 0px;">
+                        <h4>Dekorasi/<br>Pernikahan</h4>
+                    </div>
+                </div>
+                <div class="upproduk"></div>
+                <div class="upproduk">
+                    <a href="#upproduk" class="upproduk-btn" style="margin-top: 10px;">Upload Produk Vendormu</a>
+                </div>
+                <div class="upproduk"></div>
             </div>
         </div>
         <div class="vendors-container">
@@ -167,6 +139,5 @@
                 </div>
             </div>
         </div>
-        </a>
     </body>
 </html>

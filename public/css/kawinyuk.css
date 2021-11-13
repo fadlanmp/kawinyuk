@@ -66,6 +66,7 @@
     text-decoration: underline;
 }
 
+
 .minipic{
     border-radius: 50%;
     max-width: 30px;
@@ -511,3 +512,17 @@
     text-decoration: none;
     font-size: 16px;
 }
+
+.upproduk{
+    margin: auto;
+}
+
+.upproduk-btn{
+    border-radius: 12px;
+    background-color: white;
+    color: #314078;
+    text-decoration: none;
+    padding: 10px 33px;
+    font-size: 10px;
+}
+

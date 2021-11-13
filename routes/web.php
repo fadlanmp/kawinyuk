@@ -35,3 +35,7 @@ Route::get('/profile', function () {
 Route::get('/profile-edit', function () {
         return view('profile-edit');
 });
+
+Route::get('/home', function () {
+    return view('home');
+});

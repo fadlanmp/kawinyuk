@@ -27,3 +27,11 @@ Route::get('/signup', function () {
     return view('signup');
 });
 Route::post('/register', [AuthController::class, 'register']);
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/profile-edit', function () {
+        return view('profile-edit');
+});

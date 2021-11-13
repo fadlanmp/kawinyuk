@@ -38,6 +38,40 @@
     text-decoration: underline;
 }
 
+.topnav2 {
+    overflow: hidden;
+    background-color: rgb(24, 24, 24);
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 70px;
+    justify-content: space-around;
+}
+
+.topnav2grid{
+    margin-top: 15px;
+}
+
+.topnav2right{
+    float: right;
+}
+  
+.topnav2 a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav2 a:hover{
+    text-decoration: underline;
+}
+
+.minipic{
+    border-radius: 50%;
+    max-width: 30px;
+    height: auto;
+}
+
 .h-loginbtn{
     border-radius: 12px;
     border: solid 2px;
@@ -350,4 +384,130 @@
     grid-template-rows: 150px 300px 50px 50px;
     justify-content: center;
     margin-top: 50px;
+}
+
+.profile-container{
+    display: grid;
+    height: 600px;
+    justify-content: space-evenly;
+    color: white;
+    background-color: rgb(24, 24, 24);
+}
+
+.profile-grid{
+    display: grid;
+    grid-template-columns: 1200px;
+    grid-template-rows: 500px;
+    margin-top: 50px;
+}
+
+.profile-card{
+    border-radius: 12px;
+    background-color: white;
+    color: rgb(24, 24, 24);
+}
+
+.profilecard-grid{
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: 300px 300px 500px;
+    justify-content: center;
+}
+
+.profileimg-container{
+    height: auto;
+    width: 250px;
+    margin: auto;
+}
+
+.profileimg{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.profilecard-content hr{
+    border: 3px solid grey;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.profilecard-content h3{
+    margin-bottom: 20px;
+}
+
+.profilecard-content p, h3{
+    color:rgb(92, 92, 92);
+}
+
+.floatright{
+    float: right;
+}
+
+.profileedit-container{
+    display: grid;
+    height: 800px;
+    justify-content: space-evenly;
+    color: white;
+    background-color: rgb(24, 24, 24);
+}
+
+.profileedit-grid{
+    display: grid;
+    grid-template-columns: 1200px;
+    grid-template-rows: 700px;
+    margin-top: 50px;
+}
+
+.profileeditcard-grid{
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: 300px 800px;
+    justify-content: center;
+}
+
+.profile-editbtn{
+    border-radius: 12px;
+    background-color: #583178;
+    padding: 10px 42px;
+    color: white;
+    text-decoration: none;
+}
+
+.profileform input[type=text]{
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: #583178 solid 2px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 90%;
+}
+
+.profileform select{
+    padding: 10px 84px;
+    border-radius: 12px;
+    border: #583178 solid 2px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.batal{
+    border-radius: 12px;
+    border: solid 2px;
+    border-color: #583178;
+    color: #583178;
+    padding: 10px 32px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.simpanprofile{
+    border-radius: 12px;
+    border: solid 2px;
+    background-color: #583178;
+    color: white;
+    padding: 10px 32px;
+    text-decoration: none;
+    font-size: 16px;
 }

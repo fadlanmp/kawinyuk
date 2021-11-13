@@ -43,3 +43,15 @@ Route::get('/home', function () {
 Route::get('/addproduct', function () {
     return view('addproduct');
 });
+
+Route::get('/videografer', function () {
+    return view('videografer');
+});
+
+Route::get('/catering', function () {
+    return view('catering');
+});
+
+Route::get('/dekorasi', function () {
+    return view('dekorasi');
+});

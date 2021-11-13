@@ -525,4 +525,20 @@
     padding: 10px 33px;
     font-size: 10px;
 }
+.vendors-container2{
+    display: grid;
+    height: 1000px;
+    grid-template-rows: 100px 200px 200px 200px 200px;
+    justify-content: space-evenly;
+    color: white;
+    background-color: rgb(24, 24, 24);
+}
 
+.vendors-grid2{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px 150px 150px;
+    grid-template-rows: 170px 170px 170px 170px 170px 170px;
+    grid-gap: 20px;
+    justify-content: space-around;
+}

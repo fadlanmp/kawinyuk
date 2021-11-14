@@ -10,7 +10,7 @@
 <body>
     <div class="topnav2">
         <div class="topnav2grid">
-            <a href="#" style="float: left; font-size: 24px; margin-top: -20px;">KawinYuk!</a>
+            <a href="/home" style="float: left; font-size: 24px; margin-top: -20px;">KawinYuk!</a>
         </div>
         <div class="topnav2grid">
             <a href="/home">Home</a>
@@ -25,6 +25,10 @@
                 <a href="/logout" class="h-loginbtn">Logout</a>
             </div>
         </div>
+        <form action="/logout" method="POST">
+            @csrf
+            <button type="submit" class="h-loginbtn">Logout</button>
+        </form>
     </div>
     <div class="profile-container">
         <div class="profile-grid">

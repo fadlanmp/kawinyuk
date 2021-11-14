@@ -44,8 +44,8 @@
                             @csrf
                             <h2 style="margin-bottom: 30px; color: #BE42C9;">Profile</h2>
                             <p>Nama Lengkap</p>
-                            <input type="text" class="profileinput" name="vendorName" value="{{auth()->user()->vendorName}}">
-                            <p>Tanggal Lahir</p>
+                            <input type="text" class="profileinput" name="vendorName">
+                            <!-- <p>Tanggal Lahir</p>
                             <select class="profileinput" placeholder="Tanggal">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -95,18 +95,19 @@
                             </select>
                             <select class="tahun" placeholder="Tahun">
                                 <!--Ini ga ngerti ngeloopnya gmn-->
-                                <option value="Tahun">Tahun</option>
-                            </select>
+                            <!-- <option value="Tahun">Tahun</option>
+                            </select> -->
                             <p>Nomor Handphone</p>
-                            <input type="text" class="profileinput" name="vendorPhone" value="{{auth()->user()->vendorPhone}}">
+                            <input type="text" class="profileinput" name="vendorPhone">
                             <p>Deskripsi Vendor</p>
-                            <input type="text" class="profileinput" name="vedorDescription" value="{{auth()->user()->vedorDescription}}" <p>Alamat</p>
-                            <input type="text" class="profileinput" name="vendorAddres" value="{{auth()->user()->vendorAddres}}">
+                            <input type="text" class="profileinput" name="vendorDescription">
+                            <p>Alamat</p>
+                            <input type="text" class="profileinput" name="vendorAddress">
                             <!-- <div class="formbtn">
                                 <a href="#profile" class="batal">Batal</a>
                                 <input type="submit" value="simpan" class="simpanprofile">
                             </div> -->
-                            <a href="#profile" class="batal">Batal</a>
+                            <a href="/vendor/posts" class="batal">Batal</a>
                             <input type="submit" value="simpan" class="simpanprofile">
                         </form>
                     </div>

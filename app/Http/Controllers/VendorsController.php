@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class VendorsController extends Controller
 {
@@ -76,18 +77,17 @@ class VendorsController extends Controller
         ];
 
         if ($request->vendorName != $user->vendorName) {
-            $rules['vendorName'] = 'required|string|unique:users';
+            $rules['vendorName'] = 'required|string';
         }
-        // dd('sukses');
 
         $validatedData = $request->validate($rules);
 
         // $validatedData['id'] = auth()->user()->id;
         $validatedData['email'] = auth()->user()->email;
         $validatedData['password'] = auth()->user()->password;
-        User::where('id', $user->id)
-            ->update($validatedData);
 
+        User::where('id', auth()->user()->id)
+            ->update($validatedData);
         return redirect('/vendor/posts');
     }
 

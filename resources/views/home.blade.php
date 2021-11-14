@@ -10,7 +10,7 @@
 <body>
     <div class="topnav">
         <div class="topnavgrid">
-            <a href="#" style="float: left; font-size: 24px; margin-top: -20px;">KawinYuk!</a>
+            <a href="/home" style="float: left; font-size: 24px; margin-top: -20px;">KawinYuk!</a>
         </div>
         <div class="topnavgrid">
             <a href="/home">Home</a>
@@ -24,11 +24,11 @@
                 <a href="/vendor/posts"><img src="{{ url('assets/img/user.png') }}" class="minipic"></a>
                 <a href="/logout" class="h-loginbtn">Logout</a>
             </div>
-            <form action="/logout" method="POST">
-                @csrf
-                <button type="submit" class="h-loginbtn">Logout</button>
-            </form>
         </div>
+        <form action="/logout" method="POST">
+            @csrf
+            <button type="submit" class="h-loginbtn">Logout</button>
+        </form>
     </div>
     <div class="bigtitle" id="grad">
         <div class="titlegrid">
@@ -74,7 +74,7 @@
     <div class="vendors-container">
         <div class="vendortype-grid">
             <p style="text-align: left;">Videografer/Fotografer</p>
-            <a href="#halamanvideografer" style="text-align: right; color: white;">Selengkapnya >></a>
+            <a href="/videografer" style="text-align: right; color: white;">Selengkapnya >></a>
         </div>
         <div class="vendors-grid">
             <div class="vendors-card">
@@ -92,7 +92,7 @@
         </div>
         <div class="vendortype-grid">
             <p style="text-align: left;">Catering</p>
-            <a href="#halamancatering" style="text-align: right; color: white;">Selengkapnya >></a>
+            <a href="/catering" style="text-align: right; color: white;">Selengkapnya >></a>
         </div>
         <div class="vendors-grid">
             <div class="vendors-card">
@@ -110,7 +110,7 @@
         </div>
         <div class="vendortype-grid">
             <p style="text-align: left;">Pernikahan</p>
-            <a href="#halamandekor" style="text-align: right; color: white;">Selengkapnya >></a>
+            <a href="/dekorasi" style="text-align: right; color: white;">Selengkapnya >></a>
         </div>
         <div class="vendors-grid">
             <div class="vendors-card">

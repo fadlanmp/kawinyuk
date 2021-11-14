@@ -33,20 +33,9 @@ Route::post('/logout', [AuthController::class, 'logout']);
 Route::resource('/service/posts', ServicesController::class)->middleware('auth');
 Route::resource('/vendor/posts', VendorsController::class)->middleware('auth');
 
-
-Route::get('/profile', function () {
-    return view('profile');
-});
-
-Route::get('/profile-edit', function () {
-    return view('profile-edit');
-});
-
 Route::get('/home', function () {
     return view('home');
 })->middleware('auth');
-
-
 
 Route::get('/videografer', function () {
     return view('videografer');

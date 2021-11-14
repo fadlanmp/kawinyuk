@@ -65,6 +65,7 @@ class AuthController extends Controller
             'token' => $token
         ];
 
+        return view('home');
         return response($response, 201);
     }
 

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <Title>KawinYuk! - Profile</Title>
+    <Title>KawinYuk! - Add Product</Title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url('css/kawinyuk.css')}}">
 </head>
@@ -13,14 +13,14 @@
             <a href="#" style="float: left; font-size: 24px; margin-top: -20px;">KawinYuk!</a>
         </div>
         <div class="topnav2grid">
-            <a href="/">Home</a>
+            <a href="/home">Home</a>
             <a href="#news">Help</a>
             <a href="#about">About Us</a>
             <a href="#contact">Contacts</a>
         </div>
         <div class="topnav2grid">
             <div class="topnav2right">
-                <a href="#">Hai, Username</a>
+                <a href="#">Hai, {{ auth()->user()->vendorName}}</a>
                 <a href="/profile"><img src="{{ url('assets/img/user.png') }}" class="minipic"></a>
                 <a href="/" class="h-loginbtn">Logout</a>
             </div>
@@ -30,13 +30,13 @@
         <div class="profileedit-grid">
             <div class="profile-card">
                 <div class="profilecard-content" style="margin-left: 50px;">
-                    <form action="/services" method="POST" class="profileform">
+                    <form action="/service/posts" method="POST" class="profileform">
                         @csrf
                         <h2 style="margin-bottom: 30px; color: #BE42C9;">Add a product</h2>
                         <p>Nama Produk</p>
-                        <input type="text" class="profileinput" name="serviceName">
+                        <input type="text" class="profileinput" name="serviceName" required autofocus>
                         <p>Deskripsi Produk</p>
-                        <input type="text" class="profileinput" name="serviceDescription">
+                        <input type="text" class="profileinput" name="serviceDescription" required>
                         <p>Pilihan Vendor</p>
                         <select class="profileinput" placeholder="Bulan" name="serviceType">
                             <option value="Videografer">Videografer</option>
@@ -44,10 +44,11 @@
                             <option value="Dekorasi">Dekorasi</option>
                         </select>
                         <p>Pilihan Vendor</p>
-                        <form action="/action_page.php">
-                            <input type="file" id="myFile" name="servicePortfolio">
-                            <input type="submit">
-                        </form>
+                        <!-- <form action=""> -->
+                        <input type="file" id="myFile" name="servicePortfolio">
+                        <!-- <input type="submit"> -->
+                        <button type="submit">Buat</button>
+                        <!-- </form> -->
                     </form>
                 </div>
             </div>

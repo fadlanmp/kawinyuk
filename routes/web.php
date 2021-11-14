@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\VendorsController;
+use App\Http\Controllers\ServicesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +30,9 @@ Route::get('/login', function () {
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
 
+Route::resource('/service/posts', ServicesController::class)->middleware('auth');
+Route::resource('/vendor/posts', VendorsController::class)->middleware('auth');
+
 
 Route::get('/profile', function () {
     return view('profile');
@@ -41,10 +46,7 @@ Route::get('/home', function () {
     return view('home');
 })->middleware('auth');
 
-Route::get('/addproduct', function () {
-    return view('addproduct');
-});
-Route::post('/services', [ServiceController::class, 'store']);
+
 
 Route::get('/videografer', function () {
     return view('videografer');

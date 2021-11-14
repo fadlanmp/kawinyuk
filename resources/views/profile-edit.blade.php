@@ -13,16 +13,16 @@
             <a href="#" style="float: left; font-size: 24px; margin-top: -20px;">KawinYuk!</a>
         </div>
         <div class="topnav2grid">
-            <a href="/">Home</a>
+            <a href="/home">Home</a>
             <a href="#news">Help</a>
             <a href="#about">About Us</a>
             <a href="#contact">Contacts</a>
         </div>
         <div class="topnav2grid">
             <div class="topnav2right">
-                <a href="#">Hai, Username</a>
-                <a href="/profile"><img src="{{ url('assets/img/user.png') }}" class="minipic"></a>
-                <a href="/" class="h-loginbtn">Logout</a>
+                <a href="/vendor/posts">Hai, {{ auth()->user()->vendorName}}</a>
+                <a href="/vendor/posts"><img src="{{ url('assets/img/user.png') }}" class="minipic"></a>
+                <a href="/logout" class="h-loginbtn">Logout</a>
             </div>
         </div>
     </div>
@@ -34,17 +34,17 @@
                         <div class="profileimg-container">
                             <img src="{{ url('assets/img/user.png') }}" alt="user" class="profileimg">
                         </div>
-                        <h2>Username</h2>
+                        <h2>{{ auth()->user()->vendorName}}</h2>
                         <hr>
                         <a href="#logout" style="color: #BE42C9; font-size: 20px; text-decoration: none;">Log out</a>
                     </div>
                     <div class="profilecard-content" style="margin-left: 50px;">
-                        <form action="#routeprofile" method="post" class="profileform">
+                        <form action="/vendor/posts/{{auth()->user()->id}}" method="post" class="profileform">
                             @method('put')
                             @csrf
                             <h2 style="margin-bottom: 30px; color: #BE42C9;">Profile</h2>
                             <p>Nama Lengkap</p>
-                            <input type="text" class="profileinput">
+                            <input type="text" class="profileinput" name="vendorName" value="{{auth()->user()->vendorName}}">
                             <p>Tanggal Lahir</p>
                             <select class="profileinput" placeholder="Tanggal">
                                 <option value="1">1</option>
@@ -98,15 +98,16 @@
                                 <option value="Tahun">Tahun</option>
                             </select>
                             <p>Nomor Handphone</p>
-                            <input type="text" class="profileinput">
-                            <p>Vendor</p>
-                            <input type="text" class="profileinput">
-                            <p>Alamat</p>
-                            <input type="text" class="profileinput">
-                            <div class="formbtn">
+                            <input type="text" class="profileinput" name="vendorPhone" value="{{auth()->user()->vendorPhone}}">
+                            <p>Deskripsi Vendor</p>
+                            <input type="text" class="profileinput" name="vedorDescription" value="{{auth()->user()->vedorDescription}}" <p>Alamat</p>
+                            <input type="text" class="profileinput" name="vendorAddres" value="{{auth()->user()->vendorAddres}}">
+                            <!-- <div class="formbtn">
                                 <a href="#profile" class="batal">Batal</a>
                                 <input type="submit" value="simpan" class="simpanprofile">
-                            </div>
+                            </div> -->
+                            <a href="#profile" class="batal">Batal</a>
+                            <input type="submit" value="simpan" class="simpanprofile">
                         </form>
                     </div>
                 </div>

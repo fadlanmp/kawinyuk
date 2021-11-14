@@ -13,16 +13,16 @@
             <a href="#" style="float: left; font-size: 24px; margin-top: -20px;">KawinYuk!</a>
         </div>
         <div class="topnavgrid">
-            <a href="#home">Home</a>
+            <a href="/home">Home</a>
             <a href="#news">Help</a>
             <a href="#about">About Us</a>
             <a href="#contact">Contacts</a>
         </div>
         <div class="topnav2grid">
             <div class="topnav2right">
-                <a href="/profile">Hai, {{ auth()->user()->vendorName}}</a>
-                <a href="/profile"><img src="{{ url('assets/img/user.png') }}" class="minipic"></a>
-                <a href="/" class="h-loginbtn">Logout</a>
+                <a href="/vendor/posts">Hai, {{ auth()->user()->vendorName}}</a>
+                <a href="/vendor/posts"><img src="{{ url('assets/img/user.png') }}" class="minipic"></a>
+                <a href="/logout" class="h-loginbtn">Logout</a>
             </div>
             <form action="/logout" method="POST">
                 @csrf
@@ -66,7 +66,7 @@
             </div>
             <div class="upproduk"></div>
             <div class="upproduk">
-                <a href="/addproduct" class="upproduk-btn" style="margin-top: 10px;">Upload Produk Vendormu</a>
+                <a href="/service/posts/create" class="upproduk-btn" style="margin-top: 10px;">Upload Produk Vendormu</a>
             </div>
             <div class="upproduk"></div>
         </div>

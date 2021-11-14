@@ -12,6 +12,7 @@ class Service extends Model
     protected $fillable = [
         'serviceName',
         'serviceDescription',
+        'serviceType',
         'servicePortfolio'
     ];
 }

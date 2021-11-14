@@ -66,7 +66,6 @@ class AuthController extends Controller
         ];
 
         return view('home');
-        return response($response, 201);
     }
 
     //Log out

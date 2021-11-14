@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +34,7 @@ Route::get('/profile', function () {
 });
 
 Route::get('/profile-edit', function () {
-        return view('profile-edit');
+    return view('profile-edit');
 });
 
 Route::get('/home', function () {
@@ -43,6 +44,7 @@ Route::get('/home', function () {
 Route::get('/addproduct', function () {
     return view('addproduct');
 });
+Route::post('/services', [ServiceController::class, 'store']);
 
 Route::get('/videografer', function () {
     return view('videografer');

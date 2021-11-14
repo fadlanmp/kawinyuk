@@ -29,6 +29,7 @@ class ServiceController extends Controller
         $request->validate([
             'serviceName' => 'required',
             'serviceDescription' => 'required',
+            'serviceType' => 'required',
             'servicePortfolio'
         ]);
 

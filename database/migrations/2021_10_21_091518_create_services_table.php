@@ -17,7 +17,8 @@ class CreateServicesTable extends Migration
             $table->id();
             $table->string('serviceName');
             $table->string('serviceDescription');
-            $table->mediumText('servicePortfolio');
+            $table->string('serviceType');
+            $table->mediumText('servicePortfolio')->nullable();
             $table->timestamps();
         });
     }

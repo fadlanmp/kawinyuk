@@ -18,16 +18,16 @@ use App\Http\Controllers\ServiceController;
 Route::get('/', function () {
     return view('landingpage');
 });
-
-Route::get('/login', function () {
-    return view('login');
-});
-Route::post('/login', [AuthController::class, 'login']);
-
 Route::get('/signup', function () {
     return view('signup');
-});
+})->middleware('guest');
 Route::post('/register', [AuthController::class, 'register']);
+Route::get('/login', function () {
+    return view('login');
+})->name('login')->middleware('guest');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout']);
+
 
 Route::get('/profile', function () {
     return view('profile');
@@ -39,7 +39,7 @@ Route::get('/profile-edit', function () {
 
 Route::get('/home', function () {
     return view('home');
-});
+})->middleware('auth');
 
 Route::get('/addproduct', function () {
     return view('addproduct');

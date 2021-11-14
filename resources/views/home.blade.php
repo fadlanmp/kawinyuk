@@ -20,10 +20,14 @@
         </div>
         <div class="topnav2grid">
             <div class="topnav2right">
-                <a href="/profile">Hai, Username</a>
+                <a href="/profile">Hai, {{ auth()->user()->vendorName}}</a>
                 <a href="/profile"><img src="{{ url('assets/img/user.png') }}" class="minipic"></a>
                 <a href="/" class="h-loginbtn">Logout</a>
             </div>
+            <form action="/logout" method="POST">
+                @csrf
+                <button type="submit" class="h-loginbtn">Logout</button>
+            </form>
         </div>
     </div>
     <div class="bigtitle" id="grad">

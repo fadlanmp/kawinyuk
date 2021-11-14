@@ -20,9 +20,9 @@ use Illuminate\Support\Facades\Route;
 // Route::resource('vendors', VendorController::class);
 
 //Public Routes
-Route::post('/register', [AuthController::class, 'register']);
-Route::post('/login', [AuthController::class, 'login']);
-Route::get('/vendors', [VendorController::class, 'index']);
+// Route::post('/register', [AuthController::class, 'register']);
+// Route::post('/login', [AuthController::class, 'login']);
+// Route::get('/vendors', [VendorController::class, 'index']);
 Route::get('/vendors/{id}', [VendorController::class, 'show']);
 Route::get('/services', [ServiceController::class, 'index']);
 Route::get('/services/{id}', [ServiceController::class, 'show']);

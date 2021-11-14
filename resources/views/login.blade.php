@@ -24,11 +24,11 @@
                     @csrf
                     <div class="input-icons">
                         <i class="fa fa-user icon"></i>
-                        <input class="logregis-input" type="email" name="email" id="email" placeholder="Email">
+                        <input class="logregis-input" type="email" name="email" id="email" placeholder="Email" autofocus required>
                     </div>
                     <div class="input-icons">
                         <i class="fa fa-lock icon"></i>
-                        <input class="logregis-input" type="password" name="password" id="password" placeholder="Password">
+                        <input class="logregis-input" type="password" name="password" id="password" placeholder="Password" required>
                     </div>
                     <div class="login">
                         <input type="submit" class="logregis-btn" value="Login">

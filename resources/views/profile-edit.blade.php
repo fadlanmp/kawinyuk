@@ -12,12 +12,12 @@
         <div class="topnav2grid">
             <a href="#" style="float: left; font-size: 24px; margin-top: -20px;">KawinYuk!</a>
         </div>
-        <div class="topnav2grid">
+        <!-- <div class="topnav2grid">
             <a href="/home">Home</a>
             <a href="#news">Help</a>
             <a href="#about">About Us</a>
             <a href="#contact">Contacts</a>
-        </div>
+        </div> -->
         <div class="topnav2grid">
             <div class="topnav2right">
                 <a href="/vendor/posts">Hai, {{ auth()->user()->vendorName}}</a>

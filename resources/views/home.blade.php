@@ -12,23 +12,24 @@
         <div class="topnavgrid">
             <a href="/home" style="float: left; font-size: 24px; margin-top: -20px;">KawinYuk!</a>
         </div>
-        <div class="topnavgrid">
+        <!-- <div class="topnavgrid">
             <a href="/home">Home</a>
             <a href="#news">Help</a>
-            <a href="#about">About Us</a>
+            <a href="about.php">About Us</a>
             <a href="#contact">Contacts</a>
-        </div>
+        </div> -->
         <div class="topnav2grid">
             <div class="topnav2right">
                 <a href="/vendor/posts">Hai, {{ auth()->user()->vendorName}}</a>
                 <a href="/vendor/posts"><img src="{{ url('assets/img/user.png') }}" class="minipic"></a>
-                <a href="/logout" class="h-loginbtn">Logout</a>
+                <!-- <a href="/logout" method="POST" class="h-loginbtn">Logout</a> -->
             </div>
-        </div>
-        <form action="/logout" method="POST">
+            <form action="/logout" method="POST">
             @csrf
             <button type="submit" class="h-loginbtn">Logout</button>
         </form>
+        </div>
+        
     </div>
     <div class="bigtitle" id="grad">
         <div class="titlegrid">

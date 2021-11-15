@@ -11,7 +11,9 @@
 <body>
     <div class="logregis-grid">
         <div class="logregisimg-container" id="grad">
-            <h1 class="logregis-title">KawinYuk!</h1>
+            <!-- <h1 class="logregis-title">KawinYuk!</h1> -->
+            <h1 class="logregis-title"><a href="/" style="text-decoration: none;">KawinYuk!</a></h1>
+
             <img src="{{ url('assets/img/titleimg.png') }}" alt="logo" class="logregisimg">
         </div>
         <div class="logregis-form">

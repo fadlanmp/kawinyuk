@@ -52,3 +52,15 @@ Route::get('/dekorasi', function () {
 Route::get('/deskripsi', function () {
     return view('deskripsi');
 });
+
+Route::get('about', function () {
+    return view('about');
+});
+
+Route::get('help', function () {
+    return view('help');
+});
+
+Route::get('contact', function () {
+    return view('contact');
+});

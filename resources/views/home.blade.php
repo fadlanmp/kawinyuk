@@ -25,11 +25,11 @@
                 <!-- <a href="/logout" method="POST" class="h-loginbtn">Logout</a> -->
             </div>
             <form action="/logout" method="POST">
-            @csrf
-            <button type="submit" class="h-loginbtn">Logout</button>
-        </form>
+                @csrf
+                <button type="submit" class="h-loginbtn">Logout</button>
+            </form>
         </div>
-        
+
     </div>
     <div class="bigtitle" id="grad">
         <div class="titlegrid">
@@ -136,9 +136,9 @@
             </div>
             <div class="footer">
                 <h4 style="margin-bottom: 40px;">FEATURES :</h4>
-                <a href="#" style="color: white; margin-right: 30px;">Help</a>
-                <a href="#" style="color: white; margin-right: 30px;">About Us</a>
-                <a href="#" style="color: white;">Contacts</a>
+                <a href="/help" style="color: white; margin-right: 30px;">Help</a>
+                <a href="/about" style="color: white; margin-right: 30px;">About Us</a>
+                <a href="/contact" style="color: white;">Contacts</a>
             </div>
             <div class="footer">
                 <h4 style="text-align: right; margin-bottom: 25px;">Follow us :</h4>

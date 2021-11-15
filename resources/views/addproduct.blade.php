@@ -63,9 +63,9 @@
             </div>
             <div class="footer">
                 <h4 style="margin-bottom: 40px;">FEATURES :</h4>
-                <a href="#" style="color: white; margin-right: 30px;">Help</a>
-                <a href="#" style="color: white; margin-right: 30px;">About Us</a>
-                <a href="#" style="color: white;">Contacts</a>
+                <a href="/help" style="color: white; margin-right: 30px;">Help</a>
+                <a href="/about" style="color: white; margin-right: 30px;">About Us</a>
+                <a href="/contact" style="color: white;">Contacts</a>
             </div>
             <div class="footer">
                 <h4 style="text-align: right; margin-bottom: 25px;">Follow us :</h4>

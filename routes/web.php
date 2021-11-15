@@ -19,7 +19,7 @@ use App\Http\Controllers\ServicesController;
 
 Route::get('/', function () {
     return view('landingpage');
-});
+})->middleware('guest');
 Route::get('/signup', function () {
     return view('signup');
 })->middleware('guest');

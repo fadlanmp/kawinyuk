@@ -44,7 +44,7 @@
                             @csrf
                             <h2 style="margin-bottom: 30px; color: #BE42C9;">Profile</h2>
                             <p>Nama Lengkap</p>
-                            <input type="text" class="profileinput" name="vendorName">
+                            <input type="text" class="profileinput" name="vendorName" value="{{ auth()->user()->vendorName}}">
                             <!-- <p>Tanggal Lahir</p>
                             <select class="profileinput" placeholder="Tanggal">
                                 <option value="1">1</option>
@@ -98,11 +98,11 @@
                             <!-- <option value="Tahun">Tahun</option>
                             </select> -->
                             <p>Nomor Handphone</p>
-                            <input type="text" class="profileinput" name="vendorPhone">
+                            <input type="text" class="profileinput" name="vendorPhone" value="{{ auth()->user()->vendorPhone}}">
                             <p>Deskripsi Vendor</p>
-                            <input type="text" class="profileinput" name="vendorDescription">
+                            <input type="text" class="profileinput" name="vendorDescription" value="{{ auth()->user()->vendorDescription}}">
                             <p>Alamat</p>
-                            <input type="text" class="profileinput" name="vendorAddress">
+                            <input type="text" class="profileinput" name="vendorAddress" value="{{ auth()->user()->vendorAddress}}">
                             <!-- <div class="formbtn">
                                 <a href="#profile" class="batal">Batal</a>
                                 <input type="submit" value="simpan" class="simpanprofile">

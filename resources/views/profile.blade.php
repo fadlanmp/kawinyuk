@@ -42,20 +42,20 @@
                         <hr>
                         <a href="#logout" style="color: #BE42C9; font-size: 20px; text-decoration: none;">Log out</a>
                     </div>
-                    <div class="profilecard-content" style="margin-left: 50px;">
+                    <div class="profilecard-content" style="margin-left: 50px; width: 200%;">
                         <h2 style="margin-bottom: 30px; color: #BE42C9;">Profil</h2>
                         <p>Nama Lengkap</p>
                         <h3>{{ auth()->user()->vendorName}}</h3>
-                        <p>Tanggal Lahir</p>
-                        <h3>8 Desember 2000</h3>
+                        <!-- <p>Tanggal Lahir</p>
+                        <h3>8 Desember 2000</h3> -->
                         <p>No. Handphone</p>
                         <h3>{{ auth()->user()->vendorPhone}}</h3>
-                        <p>Vendor</p>
-                        <h3>{{ auth()->user()->vendorType}}</h3>
+                        <p>Deskripsi Vendor</p>
+                        <h3>{{ auth()->user()->vendorDescription}}</h3>
                         <p>Alamat</p>
-                        <h3>{{ auth()->user()->vendorAddres}}</h3>
+                        <h3>{{ auth()->user()->vendorAddress}}</h3>
                     </div>
-                    <div class="profilecard-content">
+                    <div class="profilecard-content" style="margin-left: 350px; width: fit-content;">
                         <div class="floatright">
                             <a href="/vendor/posts/create" class="profile-editbtn">Edit</a>
                         </div>

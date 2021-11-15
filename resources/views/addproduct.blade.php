@@ -14,14 +14,14 @@
         </div>
         <div class="topnav2grid">
             <a href="/home">Home</a>
-            <a href="#news">Help</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contacts</a>
+            <a href="/help">Help</a>
+            <a href="/about">About Us</a>
+            <a href="/contact">Contacts</a>
         </div>
         <div class="topnav2grid">
             <div class="topnav2right">
-                <a href="#">Hai, {{ auth()->user()->vendorName}}</a>
-                <a href="/profile"><img src="{{ url('assets/img/user.png') }}" class="minipic"></a>
+                <a href="/vendor/posts">Hai, {{ auth()->user()->vendorName}}</a>
+                <a href="/vendor/posts"><img src="{{ url('assets/img/user.png') }}" class="minipic"></a>
                 <a href="/" class="h-loginbtn">Logout</a>
             </div>
         </div>

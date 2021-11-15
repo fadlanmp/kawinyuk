@@ -53,14 +53,14 @@ Route::get('/deskripsi', function () {
     return view('deskripsi');
 });
 
-Route::get('about', function () {
+Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('help', function () {
+Route::get('/help', function () {
     return view('help');
 });
 
-Route::get('contact', function () {
+Route::get('/contact', function () {
     return view('contact');
 });

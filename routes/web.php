@@ -64,3 +64,11 @@ Route::get('/help', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/mypost-admin', function () {
+    return view('mypost-admin');
+});
+
+Route::get('/mypost-user', function () {
+    return view('mypost-user');
+});

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
@@ -50,9 +51,21 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        // dd('sukses');
+
+
+        // if(Auth::attempt($fields->'email') == 'adminkawinyuk@mail.com'){
+        //     return view('mypost-admin',[
+        //         'service' => Service::all()
+        //     ]);
+        // }
+
 
         if (Auth::attempt($fields)) {
+            if(auth()->user()->email == 'adminkawinyuk@mail.com'){
+                return view('mypost-admin',[
+                    'service' => Service::all()
+                ]);
+            }
             $request->session()->regenerate();
 
             return redirect()->intended('/home');

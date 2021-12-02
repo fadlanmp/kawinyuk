@@ -11,17 +11,21 @@
                 <a href="#" style="float: left; font-size: 24px; margin-top: -20px;">KawinYuk!</a>
             </div>
             <div class="topnav2grid">
-                <a href="#home">Home</a>
-                <a href="#news">Help</a>
-                <a href="#about">About Us</a>
-                <a href="#contact">Contacts</a>
+                <a href="/home">Home</a>
+                <a href="/help">Help</a>
+                <a href="/about">About Us</a>
+                <a href="/contact">Contacts</a>
             </div>
             <div class="topnav2grid">
                 <div class="topnav2right">
-                    <a href="#">Hai, Username</a>
-                    <a href="#profile"><img src="user.png" class="minipic"></a>
-                    <a href="#landingpage" class="h-loginbtn">Logout</a>
+                    <a href="#">Selamat Datang Kembali Admin</a>
+                    <a href="#profile"><img src="{{ url('assets/img/user.png') }}" class="minipic"></a>
+                    <!-- <a href="#landingpage" class="h-loginbtn">Logout</a> -->
                 </div>
+                <form action="/logout" method="POST">
+                @csrf
+                <button type="submit" class="h-loginbtn">Logout</button>
+            </form>
             </div>
         </div>
         <div class="profile-container">
@@ -30,7 +34,7 @@
                     <div class="profilecard-grid2">
                         <div class="profilecard-content">
                             <div class="profileimg-container">
-                                <img src="user.png" alt="user" class="profileimg">
+                                <img src="{{ url('assets/img/user.png') }}" alt="user" class="profileimg">
                             </div>
                             <h2>Edit Profil</h2>
                             <hr>
@@ -46,34 +50,22 @@
                                     <th>Pilihan Vendor</th>
                                     <th>Action</th>
                                 </tr>
+                                @foreach ($service as $service)
                                 <tr>
-                                    <td>1</td>
-                                    <td>Produk Pertama</td>
-                                    <td>Videografer/Fotografer</td>
-                                    <td><a href="#edit" class="editbutton" style="text-decoration: none">edit</a>
-                                        <a href="#delete" class="deletebutton" style="text-decoration: none">delete</a></td>
+                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$service->serviceName}}</td>
+                                    <td>{{$service->serviceType}}</td>
+                                    <td>
+                                        <a href="#edit" class="editbutton" style="text-decoration: none">edit</a>
+                                        <form action="/service/posts/{$service->slug}" method="POST" class="d-inline">
+                                            @method('delete')
+                                            @csrf
+                                            <button class="deletebutton" onclick="return confirm('Yakin mau mengahpus service ini?')">delete</button>
+                                        </form>
+                                        <!-- <a href="#delete" class="deletebutton" style="text-decoration: none">delete</a> -->
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Produk Kedua</td>
-                                    <td>Catering</td>
-                                    <td><a href="#edit" class="editbutton" style="text-decoration: none">edit</a>
-                                        <a href="#delete" class="deletebutton" style="text-decoration: none">delete</a></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Produk Ketiga</td>
-                                    <td>Dekorasi/Pernikahan</td>
-                                    <td><a href="#edit" class="editbutton" style="text-decoration: none">edit</a>
-                                        <a href="#delete" class="deletebutton" style="text-decoration: none">delete</a></td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Produk Baru Diupload</td>
-                                    <td>Videografer/Fotografer</td>
-                                    <td><a href="#edit" class="editbutton" style="text-decoration: none">edit</a>
-                                        <a href="#delete" class="deletebutton" style="text-decoration: none">delete</a></td>
-                                </tr>
+                                @endforeach
                             </table>
                         </div>
                     </div>

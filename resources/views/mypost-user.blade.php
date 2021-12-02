@@ -11,17 +11,21 @@
                 <a href="#" style="float: left; font-size: 24px; margin-top: -20px;">KawinYuk!</a>
             </div>
             <div class="topnav2grid">
-                <a href="#home">Home</a>
-                <a href="#news">Help</a>
-                <a href="#about">About Us</a>
-                <a href="#contact">Contacts</a>
+                <a href="/home">Home</a>
+                <a href="/help">Help</a>
+                <a href="/about">About Us</a>
+                <a href="/contact">Contacts</a>
             </div>
             <div class="topnav2grid">
                 <div class="topnav2right">
-                    <a href="#">Hai, Username</a>
-                    <a href="#profile"><img src="user.png" class="minipic"></a>
-                    <a href="#landingpage" class="h-loginbtn">Logout</a>
+                    <a href="/vendor/posts">Hai, {{ auth()->user()->vendorName}}</a>
+                    <a href="/vendor/posts"><img src="{{ url('assets/img/user.png') }}" class="minipic"></a>
+                    <!-- <a href="#landingpage" class="h-loginbtn">Logout</a> -->
                 </div>
+                <form action="/logout" method="POST">
+                @csrf
+                <button type="submit" class="h-loginbtn">Logout</button>
+            </form>
             </div>
         </div>
         <div class="profile-container">
@@ -30,12 +34,12 @@
                     <div class="profilecard-grid2">
                         <div class="profilecard-content">
                             <div class="profileimg-container">
-                                <img src="user.png" alt="user" class="profileimg">
+                                <img src="{{ url('assets/img/user.png') }}" alt="user" class="profileimg">
                             </div>
                             <h2>Edit Profil</h2>
                             <hr>
-                            <a href="#logout" style="color: rgb(92, 92, 92); font-size: 20px; text-decoration: none;">My Dashboard</a><br>
-                            <a href="#logout" style="color: #BE42C9; font-size: 20px; text-decoration: none;">Log out</a>
+                            <!-- <a href="#logout" style="color: rgb(92, 92, 92); font-size: 20px; text-decoration: none;">My Dashboard</a><br> -->
+                            <!-- <a href="#logout" style="color: #BE42C9; font-size: 20px; text-decoration: none;">Log out</a> -->
                         </div>
                         <div class="profilecard-content" style="margin-left: 50px;">
                             <h2 style="margin-bottom: 30px; color: #BE42C9;">My Post</h2>
@@ -45,26 +49,13 @@
                                     <th>Nama Produk</th>
                                     <th>Pilihan Vendor</th>
                                 </tr>
+                                @foreach ($service as $service)
                                 <tr>
-                                    <td>1</td>
-                                    <td>Produk Pertama</td>
-                                    <td>Videografer/Fotografer</td>
+                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$service->serviceName}}</td>
+                                    <td>{{$service->serviceType}}</td>
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Produk Kedua</td>
-                                    <td>Catering</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Produk Ketiga</td>
-                                    <td>Dekorasi/Pernikahan</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Produk Baru Diupload</td>
-                                    <td>Videografer/Fotografer</td>
-                                </tr>
+                                @endforeach
                             </table>
                         </div>
                     </div>
@@ -79,9 +70,9 @@
                 </div>
                 <div class="footer">
                     <h4 style="margin-bottom: 40px;">FEATURES :</h4>
-                    <a href="#" style="color: white; margin-right: 30px;">Help</a>
-                    <a href="#" style="color: white; margin-right: 30px;">About Us</a>
-                    <a href="#" style="color: white;">Contacts</a>
+                    <a href="/help" style="color: white; margin-right: 30px;">Help</a>
+                    <a href="/about" style="color: white; margin-right: 30px;">About Us</a>
+                    <a href="/contact" style="color: white;">Contacts</a>
                 </div>
                 <div class="footer">
                     <h4 style="text-align: right; margin-bottom: 25px;">Follow us :</h4>

@@ -14,7 +14,9 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        return Service::all();
+        return view('mypost-admin',[
+            'service' => Service::all()
+        ]);
     }
 
     /**
@@ -45,7 +47,9 @@ class ServicesController extends Controller
         $validatedData['idVendor'] = auth()->user()->id;
         Service::create($validatedData);
 
-        return redirect('/home');
+        return view('mypost-user',[
+            'service' => Service::where('idVendor', auth()->user()->id)->get()
+        ]);
     }
 
     /**
@@ -92,7 +96,11 @@ class ServicesController extends Controller
      */
     public function destroy(Service $service)
     {
-        // return Service::destroy($id);
+        Service::destroy($service->id);
+        // dd('aman');
+        return view('/mypost-admin', [
+            'service' => Service::all()
+        ]);
     }
 
     /**

@@ -68,7 +68,3 @@ Route::get('/contact', function () {
 Route::get('/mypost-admin', function () {
     return view('mypost-admin');
 });
-
-Route::get('/mypost-user', function () {
-    return view('mypost-user');
-});

@@ -57,12 +57,12 @@
                                     <td>{{$service->serviceType}}</td>
                                     <td>
                                         <a href="#edit" class="editbutton" style="text-decoration: none">edit</a>
-                                        <form action="/service/posts/{$service->slug}" method="POST" class="d-inline">
+                                        <form action="{{ url('/services/' .$service->id) }}" method="POST" class="d-inline">
                                             @method('delete')
                                             @csrf
                                             <button class="deletebutton" onclick="return confirm('Yakin mau mengahpus service ini?')">delete</button>
                                         </form>
-                                        <!-- <a href="#delete" class="deletebutton" style="text-decoration: none">delete</a> -->
+                                        <!-- <a href="{{ url('delete-service',$service->id)}}" class="deletebutton" style="text-decoration: none">delete</a> -->
                                     </td>
                                 </tr>
                                 @endforeach

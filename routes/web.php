@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\VendorsController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\CRUDAdmin;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +31,8 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
 
 Route::resource('/service/posts', ServicesController::class)->middleware('auth');
+// Route::get('/delete-service/{id}', 'CRUDAdmin@destroy')->middleware('auth')->name('delete-service');
+Route::delete('/services/{id}', [ServicesController::class, 'destroy'])->middleware('auth');
 Route::resource('/vendor/posts', VendorsController::class)->middleware('auth');
 
 Route::get('/home', function () {

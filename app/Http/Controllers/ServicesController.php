@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ServicesController extends Controller
 {
@@ -94,13 +95,12 @@ class ServicesController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $service)
+    public function destroy($id)
     {
-        Service::destroy($service->id);
-        // dd('aman');
+        Service::destroy($id);
         return view('/mypost-admin', [
-            'service' => Service::all()
-        ]);
+                'service' => Service::all()
+            ]);
     }
 
     /**

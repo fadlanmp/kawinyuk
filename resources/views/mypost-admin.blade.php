@@ -56,7 +56,7 @@
                                     <td>{{$service->serviceName}}</td>
                                     <td>{{$service->serviceType}}</td>
                                     <td>
-                                        <a href="#edit" class="editbutton" style="text-decoration: none">edit</a>
+                                        <!-- <a href="#edit" class="editbutton" style="text-decoration: none">edit</a> -->
                                         <form action="{{ url('/services/' .$service->id) }}" method="POST" class="d-inline">
                                             @method('delete')
                                             @csrf
